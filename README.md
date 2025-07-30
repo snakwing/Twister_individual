@@ -18,7 +18,7 @@ In this repository:
    
    This code takes the values obtained and inputs them into the positive solution for tau to yield a numerical value. For the results in this report, epsilon_pre was changed.
 
-5. **cae_jnl_odb_for_pre_03.zip**
+5. **cae_jnl_odb_for_epre_03.zip**
    
    This .zip file contains epre_03.cae, epre_03.jnl, and epre_03.odb, which are the model database, journal, and output database files for epsilon_pre = 0.3 (sigma_33 = 3.75E+05). Changing the sigma_33 value to the corresponding values for epsilon_pre = 0.1 to 0.5 reproduces the results discussed in the report.
 
