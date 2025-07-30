@@ -9,7 +9,7 @@ from the first into the second expression and solving for tau
 """
 
 import sympy
-from sympy import Eq, symbols, simplify 
+from sympy import Eq, simplify 
 
 # Define the symbols used
 E, epsilon, A_c, A_w, tau, J_c_2, J_w_2, J_c_4, J_w_4, K, G, epsilon_pre = sympy.symbols("E epsilon A_c A_w tau J_c_2 J_w_2 J_c_4 J_w_4 K G epsilon_pre")
@@ -18,7 +18,7 @@ E, epsilon, A_c, A_w, tau, J_c_2, J_w_2, J_c_4, J_w_4, K, G, epsilon_pre = sympy
 epsilon_expr = (-A_c*2*epsilon_pre - tau**2*(J_c_2+J_w_2))/(2*(A_c+A_w))
 
 # Define the expression for the partial derivative of the total energy function w.r.t. tau
-dE_dtau = (E*0.5)*(2*tau*J_c_2*(epsilon+epsilon_pre)+4*(tau**3)*J_c_4*(0.25+0.5*epsilon_pre)+2*epsilon*tau*J_w_2+(tau**3)*J_w_4)+ G*K*tau
+dE_dtau = (E*0.5)*(2*tau*J_c_2*(epsilon+epsilon_pre)+(tau**3)*J_c_4+2*epsilon*tau*J_w_2+(tau**3)*J_w_4)+ G*K*tau
 
 # Substitute epsilon into dE/dtau
 dE_dtau_with_epsilon = dE_dtau.subs(epsilon, epsilon_expr)
