@@ -22,10 +22,10 @@ nu = 0.45           # Poisson's ratio
 A_c = 0.0007        # Area of the core
 A_w = 0.0007        # Total area of the wings
 K = 3.4208e-08      # Torsion constant
-J_c_2 = 1.11667e-07 # Second moment of area for core (found using Mathematica code)
-J_w_2 = 3.99792e-07 # Second moment of area for wings (found using Mathematica code)
-J_c_4 = 2.74389e-11 # Fourth moment of area for core (found using Mathematica code)
-J_w_4 = 2.58596e-10 # Fourth moment of area for wings (found using Mathematica code)
+J_c_2 = 1.11667e-07 # Second polar moment of area for core (found using Mathematica code)
+J_w_2 = 3.99792e-07 # Second polar moment of area for wings (found using Mathematica code)
+J_c_4 = 2.74389e-11 # Fourth polar moment of area for core (found using Mathematica code)
+J_w_4 = 2.58596e-10 # Fourth polar moment of area for wings (found using Mathematica code)
 G = E/(2*(1+nu))    # Shear Modulus
 
 # Expression for tau obtained using 'substitute_epsilon_solve_tau.py'
