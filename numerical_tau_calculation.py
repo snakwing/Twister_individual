@@ -10,6 +10,7 @@ Numerical calculation of tau
 import numpy
 from numpy import sqrt
 
+
 # Values used for the heights and widths of the core and wings
 #     hc = 0.04    
 #     wc = 0.01    
@@ -31,5 +32,7 @@ G = E/(2*(1+nu))                  # Shear Modulus
 
 
 # Expression for tau obtained using 'substitute_epsilon_solve_tau.py'
-tau = 1.4142135623731*sqrt((A_c*E*J_w_2*epsilon_pre - A_c*G*K - A_w*E*J_c_2*epsilon_pre - A_w*G*K)/(E*(2.0*A_c*J_c_4*epsilon_pre + A_c*J_c_4 + A_c*J_w_4 + 2.0*A_w*J_c_4*epsilon_pre + A_w*J_c_4 + A_w*J_w_4 - J_c_2**2 - 2.0*J_c_2*J_w_2 - J_w_2**2)))
+tau = 1.4142135623731*sqrt((A_c*E*J_w_2*epsilon_pre - A_c*G*K - A_w*E*J_c_2*epsilon_pre - A_w*G*K)/(E*(A_c*J_c_4 + A_c*J_w_4 + A_w*J_c_4 + A_w*J_w_4 - J_c_2**2 - 2.0*J_c_2*J_w_2 - J_w_2**2)))
+#tau = 1.4142135623731*sqrt((A_c*E*J_w_2*epsilon_pre - A_c*G*K - A_w*E*J_c_2*epsilon_pre - A_w*G*K)/(E*(2.0*A_c*J_c_4*epsilon_pre + A_c*J_c_4 + A_c*J_w_4 + 2.0*A_w*J_c_4*epsilon_pre + A_w*J_c_4 + A_w*J_w_4 - J_c_2**2 - 2.0*J_c_2*J_w_2 - J_w_2**2)))
+
 print('The (positive) solution for twist per unit length, tau =', tau)
