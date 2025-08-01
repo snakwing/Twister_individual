@@ -16,7 +16,7 @@ import numpy as np
 #     ww = 0.005  
 
 E = 1.25e6                        # Young's Modulus
-epsilon_pre = 0.1                # Pre-strain
+epsilon_pre = 0.1                 # Pre-strain
 nu = 0.45                         # Poisson's ratio
 A_c = 0.0007                      # Area of the core
 A_w = 0.0007                      # Total area of the wings
