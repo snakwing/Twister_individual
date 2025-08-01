@@ -7,9 +7,7 @@ Numerical calculation of tau
 
 """
 
-import numpy
-from numpy import sqrt
-
+import numpy as np
 
 # Values used for the heights and widths of the core and wings
 #     hc = 0.04    
@@ -18,7 +16,7 @@ from numpy import sqrt
 #     ww = 0.005  
 
 E = 1.25e6                        # Young's Modulus
-epsilon_pre = 0.1                 # Pre-strain
+epsilon_pre = 0.1                # Pre-strain
 nu = 0.45                         # Poisson's ratio
 A_c = 0.0007                      # Area of the core
 A_w = 0.0007                      # Total area of the wings
@@ -30,8 +28,10 @@ J_w_4 = 2.58596e-10               # Fourth moment of area for wings (found using
 G = E/(2*(1+nu))                  # Shear Modulus
 
 
-
 # Expression for tau obtained using 'substitute_epsilon_solve_tau.py'
-tau = 1.4142135623731*sqrt((A_c*E*J_w_2*epsilon_pre - A_c*G*K - A_w*E*J_c_2*epsilon_pre - A_w*G*K)/(E*(A_c*J_c_4 + A_c*J_w_4 + A_w*J_c_4 + A_w*J_w_4 - J_c_2**2 - 2.0*J_c_2*J_w_2 - J_w_2**2)))
+tau = np.sqrt(2*((A_c*E*J_w_2*epsilon_pre - A_c*G*K - A_w*E*J_c_2*epsilon_pre - A_w*G*K)/(E*(A_c*J_c_4 + A_c*J_w_4 + A_w*J_c_4 + A_w*J_w_4 - J_c_2**2 - 2.0*J_c_2*J_w_2 - J_w_2**2))))
+
+# Rearranged tau without E and G (gives the same result (error of order E-15) due to computer rounding)
+#tau = sqrt((2*epsilon_pre*(A_c*J_w_2-A_w*J_c_2)-(1/(1+nu))*K*(A_c+A_w))/(A_c*(J_c_4+J_w_4)+A_w*(J_c_4+J_w_4)-(J_c_2+J_w_2)**2))
 
 print('The (positive) solution for twist per unit length, tau =', tau)
