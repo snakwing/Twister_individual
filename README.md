@@ -4,7 +4,7 @@ In this repository:
 
 1. **custom_polygon_for_K.m**
   
-   This MATLAB code provides inputs for the SolveTorsionSimplyConnectedRod.m MATLAB code, which in turn outputs a value for the torsion constant K and its associated error.
+   This MATLAB code provides inputs for the SolveTorsionSimplyConnectedRod.m MATLAB code with a set of anti-clockwise coordinates for each width thickness, which in turn outputs a value for the torsion constant K and its associated error. The value for K is output as "J" by the SolveTorsionSimplyConnectedRod.m code.
 
 2. **secondandFourthPolarMomentsofArea.nb**
    
@@ -18,9 +18,9 @@ In this repository:
    
    This code takes the values obtained and inputs them into the positive solution for tau to yield a numerical value. For the results in this report, epsilon_pre was changed.
 
-5. **cae_jnl_odb_for_epre_03.zip**
+5. **Folders 'original widths', 'thin widths', and 'thick widths'**
    
-   This .zip file contains epre_03.cae, epre_03.jnl, and epre_03.odb, which are the model database, journal, and output database files for epsilon_pre = 0.3 (sigma_33 = 3.75E+05). Changing the sigma_33 value to the corresponding values for epsilon_pre = 0.1 to 0.5 reproduces the results discussed in the report.
+   These .zip files contain one example .cae, .jnl, and .odb files for each design width thickness, which are the model database, journal, and output database files. Changing the sigma_33 value to the corresponding values for epsilon_pre reproduces the results discussed in the report.
 
 6. **tau_calculated_from_simulation.m**
    
