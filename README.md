@@ -6,9 +6,9 @@ In this repository:
   
    This MATLAB code provides inputs for the SolveTorsionSimplyConnectedRod.m MATLAB code with a set of anti-clockwise coordinates for each width thickness, which in turn outputs a value for the torsion constant K and its associated error. The value for K is output as "J" by the SolveTorsionSimplyConnectedRod.m code.
 
-2. **secondandFourthPolarMomentsofArea.nb**
+2. **secondandFourthPolarMomentsofArea_Orig.nb, secondandFourthPolarMomentsofArea_Thick.nb, secondandFourthPolarMomentsofArea_Thin.nb**
    
-   This Mathematica code takes the coordinates of the custom polygon in terms of the heights and widths of the core and wings respectively, and outputs the area of the core, the area of the wings, the Second Polar Moments of Area of the core and wings, and the Fourth Polar Moments of Area of the core and the wings.
+   These Mathematica codes take the coordinates of each variation of the custom polygon (original, thick, thin) in terms of the heights and widths of the core and wings respectively, and outputs the area of the core, the area of the wings, the Second Polar Moments of Area of the core and wings, and the Fourth Polar Moments of Area of the core and the wings.
 
 3. **substitute_epsilon_solve_tau.py**
    
@@ -16,7 +16,7 @@ In this repository:
 
 4. **numerical_tau_calculation.py**
    
-   This code takes the values obtained and inputs them into the positive solution for tau to yield a numerical value. For the results in this report, epsilon_pre was changed.
+   This code takes the values obtained and inputs them into the positive solution for tau to yield a numerical value. For the results in this report, epsilon_pre was changed. Each set of values calculated using the other codes included here were found for each of the original, thin, and thick width variations and can be found in the code. For example, to find the value for tau for the original width, uncomment the values underneath the height and width parameters.
 
 5. **Folders 'original widths', 'thin widths', and 'thick widths'**
    
